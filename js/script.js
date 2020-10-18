@@ -80,25 +80,25 @@ function whatMonth() {
 function setNewCalibration(calibrationName, calibrationDate, calibrationMonth, calibrationTime) {
     document.getElementById("calibrations").innerHTML += "<div class='calibration'><h4>" + calibrationTime + "," + calibrationDate + "" + calibrationMonth + "</h4><br/><p class = 'calib'>" + calibrationName + "</p></div>";
 }
-let db;
-let dbReq = indexedDB.open('myDB', 1);
-dbReq.onupgradeneeded = (event) => {
-  // Зададим переменной db ссылку на базу данных
-  db = event.target.result;
-  // Создадим хранилище объектов с именем notes.
-  let notes = db.createObjectStore('notes', {autoIncrement: true});
-}
-dbReq.onsuccess = (event) => {
-  db = event.target.result;
-}
-dbReq.onerror = (event) => {
-  alert('error opening database ' + event.target.errorCode);
-}
-let tx = db.transaction(['notes'], 'readwrite');
-let store = tx.objectStore('notes');
-let note = {text: message, timestamp: Date.now()};
-store.add(note);
-tx.oncomplete = () => { console.log('stored note!') }
-tx.onerror = (event) => {
-  alert('error storing note ' + event.target.errorCode);
-}
+// let db;
+// let dbReq = indexedDB.open('myDB', 1);
+// dbReq.onupgradeneeded = (event) => {
+//   // Зададим переменной db ссылку на базу данных
+//   db = event.target.result;
+//   // Создадим хранилище объектов с именем notes.
+//   let notes = db.createObjectStore('notes', {autoIncrement: true});
+// }
+// dbReq.onsuccess = (event) => {
+//   db = event.target.result;
+// }
+// dbReq.onerror = (event) => {
+//   alert('error opening database ' + event.target.errorCode);
+// }
+// let tx = db.transaction(['notes'], 'readwrite');
+// let store = tx.objectStore('notes');
+// let note = {text: message, timestamp: Date.now()};
+// store.add(note);
+// tx.oncomplete = () => { console.log('stored note!') }
+// tx.onerror = (event) => {
+//   alert('error storing note ' + event.target.errorCode);
+// }
