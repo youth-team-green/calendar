@@ -117,15 +117,22 @@
             </header>
             <div class="row">
               <div class="col-sm">
-                <!-- Button trigger modal -->
                 <button
                   type="button"
                   class="btn btn-primary"
                   data-toggle="modal"
                   data-target="#exampleModal"
                 >
-                  Запустить модальное окно
+                  +
                 </button>
+                <div>
+                  <span>text</span>
+                  <input type="checkbox" checked />
+                </div>
+                <div>
+                  <span>text</span>
+                  <input type="checkbox" checked />
+                </div>
               </div>
               <div class="col-sm">
                 <form style="background-color: rgb(206, 206, 206)">
@@ -275,7 +282,9 @@
               </button>
             </div>
             <div class="modal-body">
-              <p>There we go</p>
+              <input type="text" placeholder="Время" id="newTaskTime" />
+              <input type="text" placeholder="Дата" id="newTaskDate" />
+              <input type="text" placeholder="Текст" id="newTaskText" />
             </div>
             <div class="modal-footer">
               <button
@@ -285,8 +294,8 @@
               >
                 Close
               </button>
-              <button type="button" class="btn btn-primary">
-                Save changes
+              <button type="button" class="btn btn-primary" id="addTaskBtn">
+                Создать
               </button>
             </div>
           </div>
