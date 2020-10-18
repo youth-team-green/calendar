@@ -1,0 +1,11 @@
+#calendar {
+  display: flex;
+  flex-wrap: wrap;
+  background: #fefefe;
+}
+#calendar > div {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% / 7);
+  border: 1px solid #333;
+}
